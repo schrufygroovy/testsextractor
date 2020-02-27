@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 
 using NUnit.Engine;
 using NUnit.Engine.Runners;
+using NUnit.Engine.Services;
 
 namespace NUnitTestsExtractor
 {
@@ -24,9 +25,24 @@ namespace NUnitTestsExtractor
 
             // var parentPath = Directory.GetParent(testAssemblyPath);
             var package = new TestPackage(testAssemblyPath);
+#if NETSTANDARD || NETCOREAPP
+            var services = new ServiceContext();
+            // services.Add(new DriverService());
+            services.Add(new MyDriverService());
+            services.Add(new ExtensionService());
+            services.Add(new InProcessTestRunnerFactory());
+            services.Add(new SettingsService(true));
+            services.Add(new RecentFilesService());
+            services.Add(new TestFilterService());
+            services.Add(new ExtensionService());
+            services.Add(new ProjectService());
+            services.ServiceManager.StartServices();
+            var runner = new MasterTestRunner(services, package);
+#else
             var testEngine = TestEngineActivator.CreateInstance();
-            // var runner = testEngine.GetRunner(package);
-            var runner = new MasterTestRunner(new MyServiceLocator(testEngine.Services), package);
+            var runner = testEngine.GetRunner(package);
+#endif
+
             var nunitXml = runner.Explore(TestFilter.Empty);
             var session = new DiaSession(testAssemblyPath);
             foreach (XmlNode testNode in nunitXml.SelectNodes("//test-case"))

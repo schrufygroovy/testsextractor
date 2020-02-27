@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using NUnit.Engine;
+using NUnit.Engine.Extensibility;
 
 namespace NUnitTestsExtractor
 {
@@ -17,6 +18,10 @@ namespace NUnitTestsExtractor
         public T GetService<T>()
             where T : class
         {
+            if (typeof(T) == typeof(IDriverFactory))
+            {
+                return new MyDriverFactory() as T;
+            }
             return this.serviceLocator.GetService<T>();
         }
 
