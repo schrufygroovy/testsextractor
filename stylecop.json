@@ -1,0 +1,28 @@
+﻿{
+    "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+    "settings": {
+        "indentation": {
+        },
+        "spacingRules": {
+        },
+        "readabilityRules": {
+        },
+        "orderingRules": {
+            "usingDirectivesPlacement": "outsideNamespace"
+        },
+        "namingRules": {
+            "allowedHungarianPrefixes": [
+                "id",
+                "sp"
+            ]
+        },
+        "maintainabilityRules": {
+        },
+        "layoutRules": {
+            "newlineAtEndOfFile": "require"
+        },
+        "documentationRules": {
+            "companyName": "wikifolio Financial Technologies AG"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+﻿branches:
+  develop:
+    tag: beta
+    source-branches: ['master']
+    tracks-release-branches: false
+  release:
+    tag: rc

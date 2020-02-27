@@ -1,0 +1,2 @@
+﻿C:\src\nunittestsextractor\src\NUnitTestsExtractor\bin\Debug\net461\NUnitTestsExtractor.exe C:\src\qata\src\tests\external\Qata.Tests.Selenium.Wikifolio\bin\Debug\net461\Qata.Tests.Selenium.Wikifolio.dll
+# C:\src\nunittestsextractor\src\NUnitTestsExtractor\bin\Debug\net461\NUnitTestsExtractor.exe C:\src\daxi\tests\internal\unittests\Daxi.App.UnitTests\bin\Debug\netcoreapp3.0\Daxi.App.UnitTests.dll

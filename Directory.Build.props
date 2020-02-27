@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup>
+    <Company>wikifolio Financial Technologies AG</Company>
+    <Copyright>Copyright $(Company). All rights reserved.</Copyright>
+    <Authors>$(Company)</Authors>
+    <SolutionDir Condition="$(SolutionDir) == ''">$(MSBuildThisFileDirectory)</SolutionDir>
+    <CodeAnalysisRuleSet>$(SolutionDir)\codeanalysis.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
+  </ItemGroup>
+  <Target Name="Restore Nuget" AfterTargets="BeforeBuild">
+    <CallTarget Targets="Restore" />
+  </Target>
+</Project>
