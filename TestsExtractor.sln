@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VstestTest", "VstestTest\VstestTest.csproj", "{1FA6CE53-1917-478C-A448-12716DBC94C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestsExtractor", "src\TestsExtractor\TestsExtractor.csproj", "{1FA6CE53-1917-478C-A448-12716DBC94C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DCE84644-84DA-403F-8DB0-EF22302486AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1FA6CE53-1917-478C-A448-12716DBC94C0} = {DCE84644-84DA-403F-8DB0-EF22302486AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66CEE62F-8F09-49F8-BB62-3B934128A080}
