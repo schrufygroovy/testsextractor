@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "NUnitTestsExtractor": {
-      "commandName": "Project",
-      "commandLineArgs": "C:\\src\\daxi\\tests\\internal\\unittests\\Daxi.App.UnitTests\\bin\\Debug\\netcoreapp3.0\\Daxi.App.UnitTests.dll"
-    }
-  }
-}

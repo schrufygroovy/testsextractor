@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VstestTest": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow\\vstest.console.exe\" C:\\src\\qata\\src\\tests\\external\\Qata.Tests.Selenium.Insight\\bin\\Debug\\netcoreapp3.1\\NUnit3.TestAdapter.dll C:\\src\\qata\\src\\tests\\external\\Qata.Tests.Selenium.Insight\\bin\\Debug\\netcoreapp3.1\\Qata.Tests.Selenium.Insight.dll"
+    }
+  }
+}
